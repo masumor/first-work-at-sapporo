@@ -1,57 +1,453 @@
 @charset "utf-8";
-html {
+
+/* ---------------
+
+CSSを適用していく時は、下記テンプレートをコピペして
+波括弧の間に命令を書くようにしましょう！
+
+↓↓↓↓↓↓↓↓↓↓↓↓↓↓ ここからテンプレート ↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+
+.nickname{
+
 }
 
-/* 
+↑↑↑↑↑↑↑↑↑↑↑↑↑↑ ここからテンプレート ↑↑↑↑↑↑↑↑↑↑↑↑↑↑
 
-ここはメモだよ
-複数行でも対応してますよ
+---------------*/
+
+/*画面全体の基本設定*/
+
+/*画像を伸縮させるために必要*/
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    color:#333333;
+    font-size: 1.6rem;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+.site-title{
+    font-size:24rem;
+    font-weight:bold;
+}
 
 
-*/
-body {
+
+/*hero-image*/
+.hero-image{
+    position: relative;
+}
+
+.hero-image__text{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform:translate3d(-50%,-50%,0);
+    color: #fff;
+    font-size: 3.0rem;
+    font-weight: bold;
+    letter-spacing: 1.0.em;
+    margin: auto;
+}
+
+.hero-image__text2{
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform:translate3d(-50%,-50%,0) ;
+    color: #fff;
+    font-size: 2.0rem;
+    font-weight: bold;
+    letter-spacing: normal;
+
+}
+
+/*hero-image*/
+
+/*header*/
+
+.header{
+    background-color:#fff;
+
+}
+
+.header-wrapper{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.site-title{
+    display: flex;
+    color:#333333
+    font-size: 2.0rem;
+    font-weight:bold;
+}
+
+.nav-list{
+    display: flex;
+}
+
+.nav-item{
+    margin: 0 0 0 48px;
+}
+
+.nav-item>a{
+    color:#333333;
+
+}
+.wrapper{
+    max-width: 1140px;
+    margin:auto;
+
 }
 
 img {
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
 }
+
+/*---------------
+header ---------------*/
+
+
+/*---------------------
+about ----------------*/
 
 .about-title.area-title {
-  margin-bottom: 24px;
-  color: red;
-  text-align: center;
+    margin-top: 60px;
+    margin-bottom: 24px;
+    color: rgb(221, 164, 58);
+    text-align: center;
 }
-
-.area-title{
-
-color:blue;
-
-}
-
-
-
-
 
 
 .center{
- text-align: center;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    text-align: center;
 }
+
+
+ul{
+    display: flex;
+}
+
+/*----------------------
+about -----------------*/
+
+
+
+/*-----------------------
+courese-------------------*/
+
+.course{
+    margin-top: 60px;
+    margin-bottom: 24px;
+    color: #333333;
+    text-align: center;
+    font-weight: bold;
+}
+
+.course-center{
+    margin-top: 24px;
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.flex{
+    display: flex; /*横並び*/
+}
+
+.flex.course-image1{
+    width: 640px; /*画像サイズ指定*/
+    margin: 0;
+    padding: 0;
+}
+
+.flex .course-image1 img{
+    width: 100%;
+    height: auto;
+}
+
+.flex .course-right1{
+    margin: 0 0 0 20px;
+    padding: 0;
+}
+
+.flex .course-right1-title{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.flex .course-right1-text{
+    margin: 10px 0 0;
+    padding: 0;
+}
+
+.flex2{
+    display: flex;
+}
+.flex2 .course-left-title{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.flex2 .course-left{
+    margin: 0 0 0 20px;
+    padding: 0;
+}
+
+.flex2 .course-left-title{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.flex2 .course-left-text{
+    margin: 10px 0 0;
+    padding: 0;
+}
+
+.flex2.course-image2{
+    width: 640px; /*画像サイズ指定*/
+    margin: 0;
+    padding: 0;
+}
+
+
+.flex{
+    display: flex; /*横並び*/
+}
+
+.flex.course-image1{
+    width: 640px; /*画像サイズ指定*/
+    margin: 0;
+    padding: 0;
+}
+
+.flex .course-image1 img{
+    width: 100%;
+    height: auto;
+}
+
+.flex .course-right1{
+    margin: 0 0 0 20px;
+    padding: 0;
+}
+
+.flex .course-right1-title{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.flex .course-right1-text{
+    margin: 10px 0 0;
+    padding: 0;
+}
+
+/*-----------------------
+courese-------------------*/
+
+
+
+/*------------------------
+news --------------------*/
+
 .news{
-  margin-bottom: 24px;
-  color: red;
-  text-align: center;
+    margin-top: 60px;
+    margin-bottom: 24px;
+    color: rgb(221, 164, 58);
+    text-align: center;
+}
+
+.news-kana{
+    margin-bottom: 24px;
+    color: #333333;
+    text-align: center;
 }
 
 .news-list{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-}
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}  
 
 .news-item{
- min-width: 33.333%;
- width: 33.333%;
- flex: 0 0 33.333%;
+    min-width: 33.333%;
+    width: 33.333%;
+    flex: 0 0 33.333%;
+}
+
+.news-title{
+    margin: 10px 0 0;
+    padding: 10px;
+    font-weight: bold;
+}
+
+
+.btn{
+    text-align: center;
+    margin: 60px;
+
+}
+
+.btn--orange,
+a.btn--orange{
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    background-color: #eb6100;
+}
+
+.btn--orange:hover,
+a.btn--orange:hover{
+    color: #fff;
+    background-color: #f56500;
+}
+
+
+
+
+
+/*------------------------
+news --------------------*/
+
+/*------------------------
+access --------------------*/
+
+.access{
+    margin-top: 60px;
+    margin-bottom: 24px;
+    color: #333333;
+    font-weight: bold;
+    text-align: center;
+}
+
+.access-title{
+    text-align: center;
+    padding: 30px;
+}
+
+
+.flex3{
+    width:560px;
+    margin: auto;
+    text-align: center;  
+    flex-wrap: wrap;
+}
+
+.item{
+    width: 48%;
+    margin: 0 0 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: right;
+}
+
+.item2{
+    width: 100%;
+    margin: 0 0 40px;
+    font-size: 1.5rem;
+    font-weight: normal;
+    text-align: left;
+
+}
+
+/*------------------------
+access --------------------*/
+
+
+
+/*------------------------
+contact --------------------*/
+
+.contact{
+    padding: 80px;
+}
+
+
+.contact_title{
+    margin: 0 0 64px;
+    font-size: 2.4rem;
+    font-weight: bold;
+}
+
+.form-wrapper{
+    width:560px;
+    margin: auto;
+}
+
+
+
+.form-inner{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 40px;
+}
+
+.form-title{
+    width: 152%;
+    margin: 0 20px 0 0;
+    padding: 8px 0 0 0;
+    font-weight:bold;
+    text-align: right;
+}
+
+.form-item{
+    width: 388px;
+    margin: 0 0 32px;
+}
+
+.form-parts{
+    appearance: none;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 8px;
+    border: solid 1px #c9c9c9;
+    font-size: 1.6rem;
+}
+
+input[type*="radio"]{
+    appearance: none;
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    width: 16px;
+    height: 16px;
+    margin: 0 10px 0 0;
+    border:solid 1px #a0a0a0;    
+}
+
+input[type*="radio"]:checked{
+    background-color: #a0a0a0;
+}
+
+/*-------------------------------
+    footer
+-------------------------------*/
+.footer{
+    padding: 24px 0;
+    background-color:#787878;
+}
+.copyrights{
+    color:#fff;
+    text-align: center;
 }
