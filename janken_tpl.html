@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<script src="js/jquery-2.1.3.min.js"></script>
+<link rel="stylesheet" href="css/sample.css">
+<title>じゃんけん</title>
+</head>
+<body>
+
+<header>
+  <h1>じゃんけん</h1>
+</header>
+
+<main>
+  <h2>あなたの出した手は？</h2>
+  <!--
+    <ul>
+    <div class="gu_btn"><li id="gu_btn"><img src="img/gu_.jpg"></li></div>
+    <div class="cho_btn"><li id="cho_btn"><img Src="img/choki.jpg"></li></div>
+    <div class="par_btn"><li id="par_btn"><img src="img/par.jpg"></li></div>
+  </ul>-->
+  <table>
+        <tr>
+            <td><img src="img/gu_.jpg" id="gu_btn"></td>
+            <td><img src="img/choki.jpg" id="cho_btn"></td>
+            <td><img src="img/par.jpg" id="par_btn"></td>
+        </tr>
+    </table>
+    <table>
+      <tr>
+          <th>あなたの手</th>
+          <th>コンピュータの手</th>
+      </tr>
+      <tr>
+          <td><img src="" id="userImg"></td>
+          <td><img src="" id="pcImg"></td>
+      </tr>
+      <tr>
+          <td colspan="2" id="res">
+              <p id="result"></p>
+          </td>
+      </tr>
+  </table>
+
+
+  <div>コンピュータの出した手は？「<span id="pc_hands">なに？</span>」</div>
+  <div id="judgment">勝ち</div>
+</main>
+
+<footer></footer>
+
+
+<script>
+
+//グーボタンを押した時
+
+$("#gu_btn").on("click",function(){
+  let r = Math.ceil(Math.random()*3);
+  console.log(r)
+
+
+  if(r==1){
+    $("#pc_hands").html("パー");
+    $("#userImg").document.white('<img src="img/gu_.jpg">');
+    $("#judgment").html("負け")
+  }else if (r == 2){
+    $("#pc_hands").html("グー");
+    $("#userImg").document.white('<img src="img/gu_.jpg">');
+    $("#judgment").html("あいこ")
+  }else if (r == 3){
+    $("#pc_hands").html("チョキ");
+    $("#userImg").document.white('<img src="img/gu_.jpg">');
+    $("#judgment").html("勝ち")
+}});
+
+
+//チョキボタンを押した時
+
+
+$("#cho_btn").on("click",function(){
+  let r = Math.ceil(Math.random()*3);
+  console.log(r)
+
+
+  if(r==1){
+    $("#pc_hands").html("チョキ");
+    $("#userImg").document.white('<img src="img/gu_.jpg">');
+    $("#judgment").html("あいこ")
+  }else if (r == 2){
+    $("#pc_hands").html("グー");
+    $("#userImg").document.white('<img src="img/gu_.jpg">');
+    $("#judgment").html("勝ち")
+  }else if (r == 3){
+    $("#pc_hands").html("パー");
+    $("#userImg").document.white('<img src="img/gu_.jpg">');
+    $("#judgment").html("負け")
+}});
+
+//パーボタンを押した時
+
+$("#par_btn").on("click",function(){
+  let r = Math.ceil(Math.random()*3);
+  console.log(r)
+
+
+  if(r==1){
+    $("#pc_hands").html("チョキ");
+    $("#userImg").document.white('<img src="img/gu_.jpg">');
+    $("#judgment").html("負け")
+  }else if (r == 2){
+    $("#pc_hands").html("グー");
+    $("#userImg").document.white('<img src="img/gu_.jpg">');
+    $("#judgment").html("勝ち")
+  }else if (r == 3){
+    $("#pc_hands").html("パー");
+    $("#userImg").document.white('<img src="img/gu_.jpg">');
+    $("#judgment").html("あいこ")
+}});
+    
+    
+    
+
+</script>
+</body>
+</html>
